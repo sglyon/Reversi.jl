@@ -6,8 +6,8 @@ export
     Board, State, Player, RandomPlayer, Minimax, StochasticMinimax,
 
     # board
-    encode, legal_actions_bits, next_state_bits, score, bits_to_tuples,
-    legal_actions, game_over,
+    encode, legal_actions_bits, next_state_bits, score, decode, legal_actions,
+    game_over,
 
     # state
     do_action, do_pass, opponent,

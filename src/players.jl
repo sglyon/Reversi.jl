@@ -2,7 +2,7 @@ abstract type Player end
 
 select_action(p::Player, s::State) = select_action(p, s, legal_actions(s))
 select_action(p::Player, s::State, g::Base.Generator) = select_action(p, s, collect(g))
-select_action(p::Player, s::State, a::UInt64) = select_action(p, s, bits_to_tuples(a))
+select_action(p::Player, s::State, a::UInt64) = select_action(p, s, decode(a))
 
 # ------------ #
 # RandomPlayer #

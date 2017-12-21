@@ -35,7 +35,7 @@ function legal_actions_bits(s::State)
 end
 
 score(s::State) = score(s.board.p1_placed), score(s.board.p2_placed)
-legal_actions(s::State) = bits_to_tuples(legal_actions_bits(s))
+legal_actions(s::State) = decode(legal_actions_bits(s))
 function game_over(s::State)
     if s.round  < 4
         return false, 0, 0

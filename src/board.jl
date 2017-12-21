@@ -91,7 +91,7 @@ end
 
 score(x::UInt64) = count_ones(x)
 
-function bits_to_tuples(x::UInt64)
+function decode(x::UInt64)
     out = Array{Tuple{Int,Int}}(uninitialized, count_ones(x))
     i = 0
     v = UInt64(1)  # equal to encode(1, 1)
@@ -107,7 +107,7 @@ function bits_to_tuples(x::UInt64)
     out
 end
 
-legal_actions(p1::UInt64, p2::UInt64) = bits_to_tuples(legal_actions_bits(p1, p2))
+legal_actions(p1::UInt64, p2::UInt64) = decode(legal_actions_bits(p1, p2))
 
 function game_over(p1::UInt64, p2::UInt64)::Tuple{Bool,Int,Int}
     if p1 == 0
