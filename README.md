@@ -12,7 +12,7 @@ Implements the game of [Reversi](https://en.wikipedia.org/wiki/Reversi) (also kn
 the standard 8x8 version of the game is implemented.
 
 The board is represented efficiently using bitboards, which allows the use of
-efficient bitwise operations for move generation and state updates.
+bitwise operations for move generation and state updates.
 
 The game mechanics are fully implemented, but the package needs to be more
 fleshed out. See the [issue
