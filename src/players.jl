@@ -231,7 +231,7 @@ function alphabeta(p::AlphaBetaPruning, s::State, depth::Int, alpha, beta)
     return alpha, best_action
 end
 
-function Reversi.select_action(p::AlphaBetaPruning, s::State)
+function select_action(p::AlphaBetaPruning, s::State)
     # start_time = time()
     p.searched = 0
 
